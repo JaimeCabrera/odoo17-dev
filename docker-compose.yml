@@ -17,7 +17,7 @@ services:
     volumes:
       - ./odoo.conf:/etc/odoo/odoo.conf
       - odoo-data:/var/lib/odoo
-      - ./addons:/mnt/extra-addons
+      - ./addons:/mnt/extra-addons:rw
     restart: always
   db:
     image: postgres:15
