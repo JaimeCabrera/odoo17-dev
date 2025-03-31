@@ -1,0 +1,98 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+/.venv
+/.pytest_cache
+/.ruff_cache
+
+# C extensions
+*.so
+# OS generated files
+.DS_STORE
+
+#archivos de configuracion de odoo
+odoo-prod.conf
+odoo-local.conf
+/postgresql/
+
+/etc/filestore/
+
+/etc/sessions/
+
+/etc/odoo-server.log
+
+.env
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.eggs
+# Ignorar archivos compilados
+*./pyc
+** / *.pyc
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Pycharm
+.idea
+
+# Eclipse
+.settings
+
+# Visual Studio cache/options directory
+.vs/
+.vscode
+
+# OSX Files
+.DS_Store
+
+# Django stuff:
+*.log
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Sphinx documentation
+docs/_build/
+
+# Backup files
+*~
+*.swp
+
+# OCA rules
+!static/lib/
+
+/etc/odoo-server.log
+/odoo17
+.volumes/*
+init.sql
+.qodo
