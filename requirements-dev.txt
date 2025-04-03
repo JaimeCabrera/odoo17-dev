@@ -1,0 +1,6 @@
+black==24.4.2
+flake8==7.1.0
+ipython==8.26.0
+isort==5.13.2
+pymakefile==0.1.2
+watchdog==4.0.2

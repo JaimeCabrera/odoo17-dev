@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: odoo17-db
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: odoo
+    restart: always
+    ports:
+      - "5446:5432"
+    networks:
+      - odoo-erp-network
+    volumes:
+      - ./.volumes/postgres:/var/lib/postgresql/data
+  odoo:
+    build:
+      context: .
+      dockerfile: ./compose/docker/Dockerfile
+    container_name: odoo-erp
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - ./addons:/mnt/extra-addons
+    ports:
+      - "8069:8069"
+    networks:
+      - odoo-erp-network
+networks:
+  odoo-erp-network:
+    driver: bridge
